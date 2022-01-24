@@ -9,9 +9,9 @@ class DatabaseHelper {
 		std::map<int, std::string> words_converted;
 
 	public:
-		bool initializeDB(std::string *filepath);
+		bool initializeDB(std::string filepath);
 		bool convertToMap(std::fstream *file);
-		std::map<int, std::string>* getWords();
+		std::map<int, std::string>* getConvertedWords();
 };
 
 #endif // DBHELPER_H
