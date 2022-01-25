@@ -94,6 +94,24 @@ Neste segundo exemplo, a base de dados é `wiktionary.txt` e a string buscada fo
 
 Note que o programa não deve ser **case sensitive**. Ou seja, não deve fazer diferença se o usuário digita "São P", "são p", "SÃO P",  ou qualquer variação de maiúscula ou minúscula. A entrada do usuário deve ser convertida para um case qualquer (todas maiúsculas ou todas minúsculas), para facilitar a operação de busca na base de dados.
 
+# Feedback Checkin 1
+
+1. Projete ao menos as 3 classes principais propostas para o programa. Não precisa implementar, apenas os .h são suficientes. **ok**
+    - Acho que você entendeu errado a ideia de ter uma classe para armazenar o resultado. No caso sua classe "Processor" não precisaria fazer a busca binária, mas sim
+    armazenar o resultado da busca na ordem necessária para ser mostrada para o usuário. A minha sugestão é que vc coloque a busca no banco ao invés de fazer aquele
+    método que `getWords`, vc faria um método que retorna todas as entradas da map `words_converted` que tem palavras que iniciam com um certo prefixo.
+
+2. Implemente a classe responsável por ler e armazenar as informações do banco de dados de entrada. **90%**
+    - Ok, mas a leitura está errada de acordo com o formato, lembre que o primeiro valor é o número de entradas, da forma que vc leu vc está ignorando isso.
+   
+3. Escreva o main instanciando a do item 2 mostrando que ela funciona para carregar e armazenar as informações. **ok**
+
+4. Escreva parte da classe responsável pela interface com o usuário, de forma que o usuário consiga ao menos digitar a alguma palavra no loop principa, mostrando uma interface similar à interface sugerida na atividade 3.1. **ok**
+    - Legal, acho que vc poderia até colocar o loop principal dentro da classe IO.
+
+5. Use a classe implementada em 4 no main, para mostrar que ela funciona. Não precisa realizar qualquer busca no banco, se a entrada do usuário estiver sendo recebida e impressa no terminal já conta para esse checkin. **ok**
+
+
 # Autorship
 
 The description of this programming assignment was taken from [Computer Sciecne at Pricenton University](http://introcs.cs.princeton.edu/java/assignments/autocomplete.html).
