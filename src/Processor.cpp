@@ -1,13 +1,11 @@
-#ifndef PROCESSOR_H
-#define PROCESSOR_H
-#include "DatabaseHelper.h"
-#include <string>
-#include <vector>
-class Processor {
+#include "Processor.h"
 
-	public:
-		std::vector<std::string> autocomplete(std::string *word, DatabaseHelper *db);
-		// não sei ainda como fazer então vou deixar void pra não ficar reclamando de erro
-		void binarySearch(std::vector<std::string> *results, std::string *word);
-};
-#endif // PROCESSOR_H
+std::vector<std::string> Processor::autocomplete(std::string *word, DatabaseHelper *dbHelper) {
+	std::vector<std::string> results;
+	results.push_back("teste");
+	return results;
+}
+
+int Processor::binarySearch(DatabaseHelper *dbHelper, std::string *word) {
+	return 0;
+}

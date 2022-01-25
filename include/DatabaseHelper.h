@@ -11,7 +11,11 @@ class DatabaseHelper {
 	public:
 		bool initializeDB(std::string filepath);
 		bool convertToMap(std::fstream *file);
-		std::map<int, std::string>* getConvertedWords();
+		std::map<int, std::string>* getWords();
+
+		DatabaseHelper(std::string filepath);
+		DatabaseHelper();
+		~DatabaseHelper();
 };
 
 #endif // DBHELPER_H

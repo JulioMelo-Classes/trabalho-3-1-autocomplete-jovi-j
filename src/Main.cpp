@@ -11,13 +11,14 @@ int main(int argc, char ** argv) {
 	}
 
 	DatabaseHelper dbHelper;
-	// Initialize the database using the argument as the filepath
-	if (!dbHelper.initializeDB(string(argv[1]))) {
-		cout << "Error: Could not initialize database, check your file." << endl;
-		return 1;
-	}
 	IO io;
 	Processor proc;
+	
+	if (!dbHelper.initializeDB(argv[1])) {
+		cout << "Error: Could not open dictionary file." << endl;
+		return 1;
+	}
+
 	string word;
 
 	while(io.wordInput(&word)){
