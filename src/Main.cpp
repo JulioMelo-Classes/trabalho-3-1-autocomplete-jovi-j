@@ -20,9 +20,8 @@ int main(int argc, char ** argv) {
 	}
 
 	string word;
-
 	while(io.wordInput(&word)){
-		vector<string> results = proc.autocomplete(&word, &dbHelper);
+		vector<string> results = proc.autocomplete(word, &dbHelper);
 		io.showResults(&results);
 	}
 

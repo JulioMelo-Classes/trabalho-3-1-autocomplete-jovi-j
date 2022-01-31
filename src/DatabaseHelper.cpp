@@ -11,27 +11,30 @@ DatabaseHelper::~DatabaseHelper(){
 	this->fileHandler.close();
 }
 
+std::map<std::string, int>* DatabaseHelper::getWords(){
+	return &this->words_converted;
+}
+
 bool DatabaseHelper::initializeDB(std::string filepath){
 	this->fileHandler.open(filepath);
 	if(!this->fileHandler.is_open()){
 		return false;
 	}
-	return true;
+	if(this->convertToVec())
+		return true;
+	else
+		return false;
 }
 
-// retrives the words from the file and converts them to a map, the int is the occurence of the word, the string is the word itself.
-bool DatabaseHelper::convertToMap(std::fstream *file){
-	std::string word;
-	int occurence;
-	while(file->good()){
-		*file >> occurence;
-		*file >> word;
-		this->words_converted.insert(std::pair<int, std::string>(occurence, word));
+bool DatabaseHelper::convertToVec(){
+	std::string line;
+	while(std::getline(this->fileHandler, line)){
+		std::stringstream ss(line);
+		std::string word;
+		int count;
+		ss >> count;
+		ss >> word;
+		this->words_converted.insert(std::make_pair(word, count));
 	}
 	return true;
-}
-
-
-std::map<int, std::string>* DatabaseHelper::getWords(){
-	return &this->words_converted;
 }

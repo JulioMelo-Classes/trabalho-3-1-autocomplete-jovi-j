@@ -4,11 +4,12 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <algorithm>
+#include <iostream>
 
 class Processor{
 	public:
-		std::vector<std::string> autocomplete(std::string *word, DatabaseHelper *dbHelper);
-		int binarySearch(DatabaseHelper *dbHelper, std::string *word);
+		std::vector<std::string> autocomplete(std::string word, DatabaseHelper *dbHelper);
 };
 
 #endif // PROCESSOR_H

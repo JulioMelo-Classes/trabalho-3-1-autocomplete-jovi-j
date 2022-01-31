@@ -11,6 +11,7 @@ bool IO::wordInput(std::string *word){
 
 void IO::showResults(std::vector<std::string> *results){
 	if (results->size() == 0) {
+		std::cout << "No results found." << std::endl;
 		return;
 	}
 	else{
