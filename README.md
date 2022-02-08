@@ -104,3 +104,39 @@ The description of this programming assignment was taken from [Computer Sciecne 
 
 &copy; DIMAp/UFRN 2021.
 &copy; IMD/UFRN 2021.
+
+# Avaliação
+
+## Ler e validar os argumentos da linha de comando | 8 / 10
+
+- Faltou apenas validar o conteúdo do arquivo
+
+## Ler os dados da base de dados e armazená-los em uma classe apropriada | 10 / 10
+
+- ok
+
+## Separar a interface textual das demais classes do sistema concentrando os couts e cins em um único objeto | 10 / 10
+
+- ok
+
+## Implementação de uma classe para conter o resultado da requisição do usuário | 0 / 10
+
+- Não implementado, acho que vc não entendeu o objetivo desta classe, mas espero que tenha ficado claro na aula.
+
+## Implementação eficiente através de referencias e algoritmos de busca binária | 6 / 10 
+
+- Acho que a implementação não ficou ruim, mas você ainda retornou um container, além de acessar o atributo da classe DatabaseHelper. Como te falei, aqui a forma
+de fazer era vc colocar aquele método do "Processor" dentro de DatabaseHelper. O retorno deste método poderia ser uma instancia de container criado dentro dele,
+mas o melhor era criar uma classe para armazernar o resultado. Além disso vc poderia evitar copiar os dados da base de alguma forma, como mostrei na aula.
+
+## Organização do código em src, include, data | 5 / 5
+
+- ok
+
+## Documentação do código usando o padrão doxygen | 0 / 5
+
+- não feito
+
+## Implementação e documentação de arquivos de teste | 0 / 10 
+
+- não feito
